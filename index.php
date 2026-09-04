@@ -1,0 +1,395 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ayan Quran Academy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5fbf8;
+            color: #17352d;
+        }
+
+        /* Navbar */
+        header {
+            background: #075e54;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #b9f5df;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #075e54, #0b8f78);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 30px;
+            background: white;
+            color: #075e54;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #dffbef;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #075e54;
+        }
+
+        /* About */
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Courses */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #075e54;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Teacher */
+        .teacher {
+            background: #e8f7f1;
+            text-align: center;
+        }
+
+        .teacher-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .teacher-box h2 {
+            color: #075e54;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+            background: #075e54;
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+        }
+
+        .contact-box p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            margin-top: 15px;
+            background: #25d366;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #043c35;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .courses {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .courses {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">🕌 Ayan Quran Academy</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#teacher">Teacher</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div>
+            <h1>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h1>
+
+            <h2>Learn Quran Online With Ayan Quran Academy</h2>
+
+            <p>
+                Learn Quran with proper pronunciation, Tajweed and understanding.
+                Online Quran classes for beginners, children and adults.
+            </p>
+
+            <a href="#contact" class="btn">Join Quran Classes</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="title">About Our Academy</h2>
+
+        <div class="about">
+            <p>
+                Ayan Quran Academy provides online Quran teaching in a simple,
+                friendly and comfortable environment. Our aim is to help students
+                learn Quran reading, Tajweed and basic Islamic knowledge.
+            </p>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses">
+        <h2 class="title">Our Quran Courses</h2>
+
+        <div class="courses">
+
+            <div class="card">
+                <div class="icon">📖</div>
+                <h3>Noorani Qaida</h3>
+                <p>
+                    Learn Arabic letters, pronunciation and basic Quran reading.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📕</div>
+                <h3>Quran Reading</h3>
+                <p>
+                    Learn to read the Holy Quran correctly and confidently.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🕌</div>
+                <h3>Tajweed</h3>
+                <p>
+                    Learn the rules of Tajweed and improve Quran pronunciation.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌙</div>
+                <h3>Hifz Quran</h3>
+                <p>
+                    Memorize the Holy Quran with a structured learning plan.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Teacher -->
+    <section class="teacher" id="teacher">
+        <h2 class="title">About Teacher</h2>
+
+        <div class="teacher-box">
+            <h2>Teacher: Ayan</h2>
+
+            <p>
+                Assalamualaikum! I am Ayan. My goal is to help students learn
+                the Holy Quran with proper reading and Tajweed in an easy
+                and friendly way.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="title">Contact Us</h2>
+
+        <div class="contact-box">
+
+            <p>👤 <strong>Name:</strong> Ayan</p>
+
+            <p>
+                📱 <strong>Phone:</strong>
+                <a href="tel:03098461866">03098461866</a>
+            </p>
+
+            <p>
+                📧 <strong>Email:</strong>
+                <a href="mailto:Ayanzulfiqar837@gmail.com">
+                    Ayanzulfiqar837@gmail.com
+                </a>
+            </p>
+
+            <a
+                class="whatsapp"
+                href="https://wa.me/923098461866"
+                target="_blank">
+                💬 Contact on WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Ayan Quran Academy | Learn Quran Online</p>
+    </footer>
+
+</body>
+</html>
